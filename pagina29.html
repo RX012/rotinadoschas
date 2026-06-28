@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha seu Plano</title>
+
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2284139215452492');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2284139215452492&ev=PageView&noscript=1"
+/></noscript>
+
+<script>
+  window.pixelId = "6a419de1882f903c56e5cab1";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --green-progress: #1b8a43; }
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        body { font-family: 'Inter', sans-serif; margin: 0; background: #fff; display: flex; flex-direction: column; align-items: center; }
+        .container { width: 100%; max-width: 414px; padding: 20px; text-align: center; }
+        .logo { width: 115px; margin: 15px 0 25px; }
+        
+        .progress-container { 
+            width: 100%; height: 14px; 
+            background: #f0f0f0; border-radius: 30px; 
+            margin-bottom: 35px; overflow: hidden; 
+            border: 1px solid #eee; 
+        }
+        .progress-bar { 
+            width: 85%; 
+            height: 100%; 
+            background: var(--green-progress); 
+            border-radius: 30px;
+        }
+
+        h2 { font-size: 21px; font-weight: 800; margin-bottom: 45px; color: #121212; }
+        .options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; width: 100%; }
+        
+        .option-card {
+            background: #fff; border-radius: 22px; padding: 35px 10px; border: 1px solid #ececec;
+            box-shadow: 0 8px 0 #e0e0e0, 0 15px 25px rgba(0,0,0,0.08);
+            cursor: pointer; transition: all 0.1s; text-decoration: none; display: flex; flex-direction: column; align-items: center;
+        }
+        .option-card:active { transform: translateY(6px); box-shadow: 0 2px 0 #e0e0e0; }
+        .icon-img { width: 85px; margin-bottom: 18px; }
+        .option-label { font-size: 16px; font-weight: 700; color: #444; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <img src="logo.png" class="logo">
+    <div class="progress-container">
+        <div class="progress-bar"></div>
+    </div>
+    <h2>Onde prefere receber seu plano personalizado?</h2>
+    
+    <div class="options-grid">
+        <!-- Rastreamento de Clique para WhatsApp -->
+        <a href="whatsapp.html" class="option-card" onclick="trackCanal('WhatsApp')">
+            <img src="whatsapp-coracao.png" class="icon-img">
+            <span class="option-label">WhatsApp</span>
+        </a>
+        <!-- Rastreamento de Clique para E-mail -->
+        <a href="email.html" class="option-card" onclick="trackCanal('Email')">
+            <img src="email-computador.png" class="icon-img">
+            <span class="option-label">E-mail</span>
+        </a>
+    </div>
+</div>
+
+<script>
+    function trackCanal(canal) {
+        fbq('track', 'Lead', {
+            content_name: 'Escolha_Canal_Entrega',
+            custom_data: { canal_preferido: canal }
+        });
+    }
+</script>
+</body>
+</html>

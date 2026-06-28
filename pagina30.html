@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Receber Plano - WhatsApp</title>
+
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2284139215452492');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2284139215452492&ev=PageView&noscript=1"
+/></noscript>
+
+<script>
+  window.pixelId = "6a419de1882f903c56e5cab1";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green-btn: #1b8a43;
+            --green-dark: #125e2e;
+            --input-border: #000000;
+        }
+
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            margin: 0; padding: 0; 
+            background-color: #ffffff;
+            display: flex; flex-direction: column; align-items: center;
+        }
+
+        .container { 
+            width: 100%; max-width: 414px; 
+            padding: 20px; 
+            text-align: center;
+        }
+
+        header { margin-top: 20px; margin-bottom: 50px; }
+        .logo { width: 120px; }
+
+        h2 { 
+            font-size: 21px; font-weight: 800; line-height: 1.4; 
+            margin-bottom: 40px; color: #000; padding: 0 15px;
+        }
+
+        .input-group {
+            position: relative;
+            width: 100%;
+            margin-bottom: 25px;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 20px 20px 20px 55px;
+            font-size: 17px;
+            border: 2px solid var(--input-border);
+            border-radius: 12px;
+            outline: none;
+            color: #333;
+            background: #fff;
+        }
+
+        .input-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 22px;
+            opacity: 0.8;
+        }
+
+        .continue-btn {
+            background-color: var(--green-btn);
+            color: #ffffff;
+            width: 100%;
+            padding: 22px;
+            font-size: 20px;
+            font-weight: 800;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            margin-top: 10px;
+            box-shadow: 0 6px 0 var(--green-dark);
+            transition: all 0.1s ease;
+            animation: pulseEffect 2s infinite;
+        }
+
+        .continue-btn:active {
+            transform: translateY(4px);
+            box-shadow: 0 2px 0 var(--green-dark);
+        }
+
+        @keyframes pulseEffect {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <img src="logo.png" class="logo" alt="Rotina dos Chás">
+    </header>
+
+    <h2>Digite seu número do whatsapp para receber seu plano personalizado</h2>
+
+    <form id="whatsappForm" onsubmit="redirecionar(event)">
+        <div class="input-group">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E" class="input-icon">
+            <input type="tel" id="whatsappInput" class="input-field" placeholder="Digite seu Whatsapp com DDD..." required>
+        </div>
+
+        <button type="submit" class="continue-btn">Continuar</button>
+    </form>
+</div>
+
+<script>
+    function redirecionar(event) {
+        event.preventDefault();
+        
+        // Rastreia o envio do número (Lead qualificado)
+        fbq('track', 'Lead', {
+            content_name: 'Captura_WhatsApp'
+        });
+
+        window.location.href = "pagina31.html";
+    }
+</script>
+
+</body>
+</html>

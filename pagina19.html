@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peso Atual - Rotina dos Chás</title>
+
+ <script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2284139215452492');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2284139215452492&ev=PageView&noscript=1"
+/></noscript>
+
+<script>
+  window.pixelId = "6a419de1882f903c56e5cab1";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green-btn: #1b8a43;
+            --green-shadow: #125e2e;
+            --text-dark: #1a1a1a;
+            --gray-bg: #fcfcfc;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0; padding: 0;
+            display: flex; justify-content: center;
+            background-color: #fff;
+        }
+
+        .main-container {
+            max-width: 450px; width: 100%;
+            text-align: center; padding: 15px;
+            box-sizing: border-box;
+            padding-top: 40px; 
+        }
+
+        .logo-container { width: 100%; margin-bottom: 40px; display: flex; justify-content: center; }
+        .logo-container img { max-width: 110px; height: auto; }
+
+        h2 { color: var(--text-dark); font-size: 24px; font-weight: 900; margin-bottom: 12px; }
+        
+        .sub-texto { 
+            font-size: 15px; 
+            color: var(--text-dark); 
+            text-decoration: underline; 
+            margin-bottom: 40px;
+            display: block;
+            line-height: 1.4;
+        }
+
+        .input-wrapper {
+            position: relative;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .icon-user {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #1a1a1a;
+            width: 24px;
+            height: 24px;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 22px 15px 22px 55px;
+            font-size: 17px;
+            border: 1px solid #e0e0e0;
+            border-radius: 15px;
+            background-color: var(--gray-bg);
+            box-sizing: border-box;
+            outline: none;
+            color: #333;
+        }
+
+        .btn-grande {
+            background-color: var(--green-btn);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            width: 100%;
+            padding: 22px;
+            font-size: 20px;
+            font-weight: 800;
+            cursor: pointer;
+            box-shadow: 0 6px 0px 0px var(--green-shadow);
+            margin-bottom: 40px;
+            transition: all 0.1s;
+        }
+
+        .btn-grande:active {
+            transform: translateY(3px);
+            box-shadow: 0 3px 0px 0px var(--green-shadow);
+        }
+
+        .info-card {
+            background-color: #fff;
+            border: 1px solid #f2f2f2;
+            border-radius: 18px;
+            padding: 25px 20px;
+            display: flex;
+            align-items: center;
+            text-align: left;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+
+        .icon-check {
+            margin-right: 15px;
+            flex-shrink: 0;
+            color: #1a1a1a;
+        }
+
+        .info-card p {
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.4;
+            color: var(--text-dark);
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+    <div class="logo-container">
+        <img src="logo.png" alt="Logotipo">
+    </div>
+
+    <h2>Qual é o seu peso atual?</h2>
+    
+    <span class="sub-texto">
+        Estamos quase lá! Vamos ajustar seu plano de acordo com seu corpo.
+    </span>
+
+    <div class="input-wrapper">
+        <svg class="icon-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        <input type="number" id="pesoInput" placeholder="Digite o seu peso aqui">
+    </div>
+
+    <button class="btn-grande" onclick="validarEIr()">
+        Continuar
+    </button>
+
+    <div class="info-card">
+        <svg class="icon-check" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <p>Baseado nisso, ajustaremos a dosagem ideal para os melhores resultados!</p>
+    </div>
+</div>
+
+<script>
+    function validarEIr() {
+        const peso = document.getElementById('pesoInput').value;
+        
+        if(peso === "" || peso <= 0) {
+            alert("Por favor, informe seu peso atual.");
+            return;
+        }
+
+        // Salva na memória
+        localStorage.setItem("usuario_peso", peso);
+        
+        // Dispara evento de Lead com o valor do peso capturado
+        fbq('track', 'Lead', {
+            content_name: 'Captura_Peso_Atual',
+            value: parseFloat(peso),
+            currency: 'MZN' // Ajuste conforme a sua moeda local
+        });
+        
+        window.location.href = "pagina20.html";
+    }
+</script>
+
+</body>
+</html>

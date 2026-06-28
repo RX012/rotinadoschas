@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetivo - Rotina dos Chás</title>
+
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2284139215452492');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2284139215452492&ev=PageView&noscript=1"
+/></noscript>
+
+<script>
+  window.pixelId = "6a419de1882f903c56e5cab1";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green-btn: #1b8a43;
+            --green-shadow: #125e2e;
+            --green-border: #2d8a4e;
+            --green-bg-light: #f4faf6;
+            --text-dark: #1a1a1a;
+            --gray-progress: #f3f3f3;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #fff;
+        }
+
+        .main-container {
+            max-width: 450px; 
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .logo-container {
+            width: 100%;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .logo-container img {
+            max-width: 150px;
+            height: auto;
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 12px;
+            background-color: var(--gray-progress);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: var(--green-btn);
+            width: 0%;
+            border-radius: 20px;
+            transition: width 1.5s cubic-bezier(0.1, 0.5, 0.5, 1);
+        }
+
+        h2 {
+            color: var(--text-dark);
+            font-size: 22px;
+            font-weight: 900;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            text-decoration: underline;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-dark);
+            display: block;
+            margin-bottom: 30px;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .option-card {
+            background-color: var(--green-bg-light);
+            border: 2px solid var(--green-border);
+            border-radius: 15px;
+            padding: 20px 10px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            text-align: left;
+            position: relative;
+            min-height: 85px;
+            box-shadow: 0 4px 0px 0px var(--green-border);
+            transition: all 0.1s ease;
+            box-sizing: border-box;
+        }
+
+        .option-card.active {
+            transform: translateY(3px);
+            box-shadow: 0 1px 0px 0px var(--green-border);
+            background-color: #e8f5ed;
+        }
+
+        .radio-circle {
+            width: 24px;
+            height: 24px;
+            border: 2px solid var(--green-btn);
+            border-radius: 50%;
+            margin-right: 10px;
+            background: white;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .active .radio-circle::after {
+            content: "";
+            width: 14px;
+            height: 14px;
+            background-color: var(--green-btn);
+            border-radius: 50%;
+        }
+
+        .option-text {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #222;
+        }
+
+        .btn-continuar {
+            width: 100%;
+            background-color: var(--green-btn);
+            color: white;
+            border: none;
+            padding: 22px;
+            border-radius: 15px;
+            font-size: 18px;
+            font-weight: 900;
+            text-transform: uppercase;
+            cursor: pointer;
+            letter-spacing: 0.5px;
+            box-shadow: 0 6px 0px 0px var(--green-shadow);
+            transition: all 0.2s ease;
+            animation: pulse-3d 2.5s infinite;
+            outline: none;
+        }
+
+        .btn-continuar:active {
+            transform: translateY(4px);
+            box-shadow: 0 2px 0px 0px var(--green-shadow);
+        }
+
+        @keyframes pulse-3d {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body onload="animarProgresso()">
+
+<div class="main-container">
+    
+    <div class="logo-container">
+        <img src="logo.png" alt="Logotipo">
+    </div>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="progresso"></div>
+    </div>
+
+    <h2>Qual é o objetivo com seu corpo?</h2>
+    <span class="subtitle">Escolha seus maiores interesses abaixo:</span>
+
+    <div class="options-grid">
+        <div class="option-card" onclick="toggleOption(this)">
+            <div class="radio-circle"></div>
+            <span class="option-text">Perder peso</span>
+        </div>
+        <div class="option-card" onclick="toggleOption(this)">
+            <div class="radio-circle"></div>
+            <span class="option-text">Queimar gordura no fígado</span>
+        </div>
+        <div class="option-card" onclick="toggleOption(this)">
+            <div class="radio-circle"></div>
+            <span class="option-text">Eliminar a retenção de líquidos</span>
+        </div>
+        <div class="option-card" onclick="toggleOption(this)">
+            <div class="radio-circle"></div>
+            <span class="option-text">Acelerar o metabolismo</span>
+        </div>
+        <div class="option-card" onclick="toggleOption(this)">
+            <div class="radio-circle"></div>
+            <span class="option-text">Aumento na expectativa de vida</span>
+        </div>
+        <div class="option-card" onclick="toggleOption(this)">
+            <div class="radio-circle"></div>
+            <span class="option-text">Emagrecer na menopausa</span>
+        </div>
+        <div class="option-card" onclick="toggleOption(this)">
+            <div class="radio-circle"></div>
+            <span class="option-text">Acabar com desejo de comer besteira</span>
+        </div>
+        <div class="option-card" onclick="toggleOption(this)">
+            <div class="radio-circle"></div>
+            <span class="option-text">Redução nos níveis de colesterol</span>
+        </div>
+    </div>
+
+    <button class="btn-continuar" onclick="irParaPagina3()">
+        Continuar
+    </button>
+
+</div>
+
+<script>
+    function animarProgresso() {
+        setTimeout(() => {
+            document.getElementById("progresso").style.width = "12%";
+        }, 300);
+    }
+
+    function toggleOption(element) {
+        element.classList.toggle('active');
+    }
+
+    function irParaPagina3() {
+        // Dispara o evento de Lead para marcar a interação na página 2
+        fbq('track', 'Lead', {
+            content_name: 'Selecao_Objetivo'
+        });
+
+        // Redirecionamento após o disparo
+        setTimeout(function() {
+            window.location.href = "pagina3.html"; 
+        }, 150);
+    }
+</script>
+
+</body>
+</html>

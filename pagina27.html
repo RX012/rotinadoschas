@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHÁS BARIÁTRICOE</title>
+
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2284139215452492');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2284139215452492&ev=PageView&noscript=1"
+/></noscript>
+
+<script>
+  window.pixelId = "6a419de1882f903c56e5cab1";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">    
+    <style>    
+        :root {    
+            --cor-primaria: #28a745;    
+            --cor-alerta: #ff0000;    
+            --cor-fundo-amarelo: #f9f992;    
+            --cor-fundo-roxo: #a399f2;    
+            --cor-cinza-claro: #f4f4f4;    
+        }  * {    
+        box-sizing: border-box;    
+        margin: 0;    
+        padding: 0;    
+        font-family: 'Montserrat', sans-serif;    
+    }    body {    
+    background-color: #fff;    
+    color: #333;    
+    line-height: 1.6;    
+    padding-bottom: 40px;    
+}    
+
+.container {    
+    max-width: 500px;    
+    margin: 0 auto;    
+    padding: 20px;    
+    text-align: center;    
+}    
+
+.header-logo {    
+    margin-bottom: 20px;    
+}    
+.header-logo img {    
+    width: 150px; 
+    height: auto;    
+    display: block;    
+    margin: 0 auto;    
+}    
+
+h1 {    
+    font-size: 1.5rem;    
+    margin-bottom: 25px;    
+}    
+h1 span {    
+    font-weight: 900;    
+    color: #000;    
+}    
+
+/* --- PLAYER DE ÁUDIO --- */
+.audio-player {    
+    background: #fff;    
+    border-radius: 20px;    
+    padding: 15px;    
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);    
+    display: flex;    
+    align-items: center;    
+    margin-bottom: 30px;    
+    gap: 15px;    
+}    
+
+.play-btn {    
+    font-size: 28px;    
+    color: var(--cor-primaria);    
+    cursor: pointer;    
+    min-width: 30px;
+}    
+
+.waveform-container {    
+    flex-grow: 1;    
+    height: 30px;    
+    position: relative;    
+    background: #f0f0f0; 
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+}    
+
+.bars {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.2;
+}
+.bar {
+    flex: 1;
+    background: #333;
+    height: 30%;
+}
+.playing .bar {
+    animation: wave 1s infinite alternate;
+}
+@keyframes wave {
+    0% { height: 20%; }
+    100% { height: 80%; }
+}
+
+.progress-bar-fill {    
+    position: absolute;    
+    top: 0;    
+    left: 0;    
+    width: 0%;    
+    height: 100%;    
+    background: rgba(40, 167, 69, 0.2);    
+    border-right: 2px solid var(--cor-primaria);
+    pointer-events: none;
+}    
+
+.progress-dot {    
+    position: absolute;    
+    top: 50%;    
+    left: 0%;    
+    width: 14px;    
+    height: 14px;    
+    background: var(--cor-primaria);    
+    border-radius: 50%;    
+    transform: translate(-50%, -50%);    
+    z-index: 5;
+    pointer-events: none;
+}    
+
+.avatar-img {    
+    width: 50px;    
+    height: 50px;    
+    border-radius: 50%;    
+    object-fit: cover;    
+    border: 2px solid var(--cor-primaria);
+}    
+
+.alerta-vermelho { background: var(--cor-alerta); color: #fff; padding: 20px; border-radius: 15px; margin-bottom: 30px; text-align: left; font-size: 1.1rem; }
+.alerta-vermelho strong { text-transform: uppercase; text-decoration: underline; }
+.imc-section { background: var(--cor-cinza-claro); padding: 20px; border-radius: 15px; margin-bottom: 30px; }
+.imc-bar-container { height: 15px; background: linear-gradient(to right, #28a745, #f1c40f, #e67e22, #e74c3c); border-radius: 10px; position: relative; margin: 40px 0 20px; }
+.imc-marker { position: absolute; top: -10px; left: 0%; width: 25px; height: 25px; background: #fff; border: 4px solid #fff; box-shadow: 0 0 10px rgba(0,0,0,0.3); border-radius: 50%; transition: left 2s ease-out; }
+.tooltip-imc { position: absolute; top: -45px; left: 50%; transform: translateX(-50%); background: #fff; padding: 5px 10px; border-radius: 8px; font-size: 0.8rem; white-space: nowrap; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+.imc-labels { display: flex; justify-content: space-between; font-size: 0.7rem; font-weight: bold; }
+.bloco { padding: 20px; border-radius: 15px; margin-bottom: 15px; text-align: left; }
+.bloco-amarelo { background: var(--cor-fundo-amarelo); }
+.bloco-vermelho { background: var(--cor-alerta); color: #fff; }
+.bloco-roxo { background: var(--cor-fundo-roxo); color: #fff; }
+.flex-cards { display: flex; gap: 10px; margin-bottom: 30px; }
+.card-half { flex: 1; background: #fff; border: 1px solid #eee; border-radius: 10px; padding: 10px; }
+.circle-chart { width: 80px; margin: 10px auto; }
+.img-sad-woman { width: 100%; border-radius: 5px; }
+.promessa { font-size: 1.4rem; margin: 30px 0; font-weight: bold; }
+.text-red { color: var(--cor-alerta); }
+.semana-container { display: flex; justify-content: space-around; margin-bottom: 40px; }
+.semana-col { display: flex; flex-direction: column; align-items: center; }
+.progress-vertical { width: 40px; height: 100px; background: #eee; border-radius: 10px; position: relative; overflow: hidden; margin: 10px 0; }
+.fill-vertical { position: absolute; bottom: 0; width: 100%; background: var(--cor-primaria); height: 0%; transition: height 1.5s ease-in-out; }
+.img-fernanda-unica { width: 100%; border-radius: 10px; margin-top: 15px; }
+.btn-cta { display: block; width: 100%; background: var(--cor-primaria); color: #fff; text-decoration: none; padding: 20px; font-size: 1.2rem; font-weight: bold; border-radius: 10px; margin-top: 30px; animation: pulse 2s infinite; text-align: center; }
+
+@keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.03); } 100% { transform: scale(1); } }
+</style>
+</head>    
+<body>  
+<div class="container">    
+    <div class="header-logo">    
+        <img src="logotipo.jpg" alt="Logotipo">    
+    </div>  
+    <h1><strong>Amiga</strong>, ouça meu áudio urgente!</h1>    
+
+    <div class="audio-player" id="playerContainer">    
+        <div class="play-btn" id="playIcon">▶</div>    
+        <div class="waveform-container" id="waveContainer">    
+            <div class="bars">
+                <div class="bar" style="animation-delay: 0.1s"></div>
+                <div class="bar" style="animation-delay: 0.3s"></div>
+                <div class="bar" style="animation-delay: 0.2s"></div>
+                <div class="bar" style="animation-delay: 0.4s"></div>
+                <div class="bar" style="animation-delay: 0.1s"></div>
+            </div>
+            <div class="progress-bar-fill" id="audioFill"></div>    
+            <div class="progress-dot" id="audioDot"></div>    
+        </div>    
+        <img src="minha-imagem.jpg" class="avatar-img" alt="Especialista">
+    </div>    
+
+    <audio id="meuAudio" autoplay>    
+        <source src="audio.mp3" type="audio/mpeg">    
+    </audio>  
+
+    <div class="alerta-vermelho">⚠️ <strong>ATENÇÃO, Amiga!</strong> Pelas suas respostas, seu corpo tá no modo <strong>ACÚMULO DE GORDURA</strong>. Se não agir <strong>HOJE</strong>, essa situação tende a <strong>PIORAR</strong>.</div>
+    <div class="imc-section">
+        <p>Índice de massa corporal (IMC)</p>
+        <p><strong>Acima do peso ideal!</strong></p>
+        <div class="imc-bar-container"><div class="imc-marker" id="imcMarker"><div class="tooltip-imc">Amiga, você está aqui</div></div></div>
+        <div class="imc-labels"><span>Saudável</span><span>Acima do peso</span><span>Sobrepeso</span></div>
+    </div>
+    <div class="bloco bloco-amarelo"><strong>Seu metabolismo pode estar te sabotando sem que você perceba!</strong></div>
+    <div class="bloco bloco-vermelho"><strong>🚨 Alguns sinais de alerta:</strong><br>
+        ❌ Metabolismo lento e dificuldade para emagrecer mesmo comendo pouco.<br>    
+    ❌ Cansaço constante e sensação de inchaço.<br>    
+    ❌ Acúmulo de gordura em áreas específicas do corpo, principalmente na barriga.</div>
+    <div class="bloco bloco-roxo">💡 Com os chás bariátricos, seu corpo acelera a queima de gordura naturalmente!<br><br>    
+    A combinação ideal de ingredientes pode ativar seu metabolismo, reduzir a retenção de líquidos e aumentar sua disposição.<br><br>    
+    🔽 Descubra agora como o Mounjaro de Pobre pode transformar seu corpo! ...</div>
+    
+    <div class="flex-cards">
+        <div class="card-half">
+            <p style="font-size: 0.8rem;">Índice de massa corporal: <strong>Muito alto!</strong></p>
+            <div class="circle-chart"><svg viewBox="0 0 36 36"><path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#eee" stroke-width="3"/><path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831" fill="none" stroke="#e74c3c" stroke-width="3" stroke-dasharray="87, 100"/><text x="18" y="20.35" font-size="8px" text-anchor="middle" font-weight="bold">87%</text></svg></div>
+        </div>
+        <div class="card-half"><strong>Sobrepeso</strong><img src="mulhersobrepeso.jpg" class="img-sad-woman" alt="Mulher triste"></div>
+    </div>
+
+    <div class="promessa">Você pode perder de <span class="text-red">9KG a 15KG</span> em <span class="text-red">3 semanas</span>!</div>
+    <div class="semana-container">
+        <div class="semana-col"><span>1 Semana</span><div class="progress-vertical"><div class="fill-vertical" style="height: 33%;"></div></div><strong>-5 KG</strong></div>
+        <div class="semana-col"><span>2 Semanas</span><div class="progress-vertical"><div class="fill-vertical" style="height: 60%;"></div></div><strong>-9 KG</strong></div>
+        <div class="semana-col"><span>3 Semanas</span><div class="progress-vertical"><div class="fill-vertical" style="height: 100%;"></div></div><strong>-15 KG</strong></div>
+    </div>
+
+    <h3>Veja a transformação da Fernanda!</h3>
+    <img src="fernanda-evolucao.jpg" class="img-fernanda-unica" alt="Evolução Fernanda">
+    <a href="28.html" class="btn-cta">Quero Transformar Minha Vida Hoje! 😍</a>
+</div>
+
+<script>
+const audio = document.getElementById('meuAudio');
+const playIcon = document.getElementById('playIcon');
+const audioFill = document.getElementById('audioFill');
+const audioDot = document.getElementById('audioDot');
+const waveContainer = document.getElementById('waveContainer');
+const playerContainer = document.getElementById('playerContainer');
+
+// Tentar dar play automático
+window.addEventListener('load', () => {
+    audio.play().catch(() => {
+        console.log("Autoplay bloqueado pelo navegador.");
+    });
+});
+
+playIcon.addEventListener('click', () => {
+    if (audio.paused) {
+        audio.play();
+    } else {
+        audio.pause();
+    }
+});
+
+audio.onplay = () => {
+    playIcon.innerText = '⏸';
+    playerContainer.classList.add('playing');
+};
+
+audio.onpause = () => {
+    playIcon.innerText = '▶';
+    playerContainer.classList.remove('playing');
+};
+
+audio.addEventListener('timeupdate', () => {
+    const percent = (audio.currentTime / audio.duration) * 100;
+    audioFill.style.width = percent + '%';
+    audioDot.style.left = percent + '%';
+});
+
+waveContainer.addEventListener('click', (e) => {
+    const rect = waveContainer.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const width = rect.width;
+    const percent = x / width;
+    audio.currentTime = percent * audio.duration;
+});
+
+window.onload = function () {
+    setTimeout(() => {
+        const marker = document.getElementById('imcMarker');
+        if (marker) marker.style.left = '85%';
+    }, 500);
+};
+</script>
+
+</body>
+</html>

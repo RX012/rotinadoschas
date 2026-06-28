@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benefícios - Rotina dos Chás</title>
+
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2284139215452492');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2284139215452492&ev=PageView&noscript=1"
+/></noscript>
+
+<script>
+  window.pixelId = "6a419de1882f903c56e5cab1";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green-btn: #1b8a43;
+            --green-shadow: #125e2e;
+            --green-border: #2d8a4e;
+            --text-dark: #1a1a1a;
+            --gray-progress: #f3f3f3;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0; padding: 0;
+            display: flex; justify-content: center;
+            background-color: #fff;
+        }
+
+        .main-container {
+            max-width: 450px; width: 100%;
+            text-align: center; padding: 15px;
+            box-sizing: border-box;
+        }
+
+        .logo-container { width: 100%; margin-bottom: 10px; display: flex; justify-content: center; }
+        .logo-container img { max-width: 110px; height: auto; }
+
+        .progress-container {
+            width: 100%; height: 8px;
+            background-color: var(--gray-progress);
+            border-radius: 20px; margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%; background-color: var(--green-btn);
+            width: 85%;
+            border-radius: 20px;
+            animation: progressoRecuoFinal 3s forwards ease-in-out;
+        }
+
+        @keyframes progressoRecuoFinal {
+            0% { width: 85%; }
+            75% { width: 98%; }
+            100% { width: 95%; }
+        }
+
+        h2 { color: var(--text-dark); font-size: 20px; font-weight: 900; margin-bottom: 10px; line-height: 1.3; }
+        .sub-titulo { font-size: 14px; color: #444; margin-bottom: 25px; display: block; }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .option-item {
+            background: #fff;
+            border: 1.5px solid var(--green-border);
+            border-radius: 12px;
+            padding: 15px 10px;
+            display: flex;
+            align-items: center;
+            text-align: left;
+            cursor: pointer;
+            position: relative;
+            box-shadow: 0 4px 0px 0px var(--green-border);
+            transition: 0.1s;
+            min-height: 80px;
+        }
+
+        .option-item:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 0px 0px var(--green-border);
+        }
+
+        .check-circle {
+            width: 22px; height: 22px;
+            border: 2px solid var(--green-border);
+            border-radius: 50%;
+            margin-right: 10px;
+            flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+        }
+
+        .option-item.selected { background-color: #f0fff4; }
+        .option-item.selected .check-circle { background-color: var(--green-btn); border-color: var(--green-btn); }
+        .option-item.selected .check-circle::after { content: '✓'; color: white; font-size: 14px; font-weight: bold; }
+
+        .option-text { font-size: 13px; font-weight: 600; color: var(--text-dark); line-height: 1.2; }
+        .full-width { grid-column: span 2; }
+
+        .btn-grande {
+            background-color: var(--green-btn);
+            color: white; border: none; border-radius: 12px;
+            width: 100%; padding: 20px;
+            font-size: 18px; font-weight: 800;
+            cursor: pointer;
+            box-shadow: 0 5px 0px 0px var(--green-shadow);
+            animation: pulseBtn 2s infinite ease-in-out;
+        }
+
+        @keyframes pulseBtn {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+    <div class="logo-container">
+        <img src="logo.png" alt="Logotipo">
+    </div>
+
+    <div class="progress-container">
+        <div class="progress-bar"></div>
+    </div>
+
+    <h2>Amiga, quais desses benefícios gostaria de ter?</h2>
+    <span class="sub-titulo">Vamos personalizar a sua fórmula para maximizar seus resultados.</span>
+
+    <div class="options-grid">
+        <div class="option-item" onclick="toggleOption(this)">
+            <div class="check-circle"></div>
+            <span class="option-text">Sono mais profundo</span>
+        </div>
+        <div class="option-item" onclick="toggleOption(this)">
+            <div class="check-circle"></div>
+            <span class="option-text">Menos dores e inflamações</span>
+        </div>
+        <div class="option-item" onclick="toggleOption(this)">
+            <div class="check-circle"></div>
+            <span class="option-text">Mais energia e disposição ao longo do dia</span>
+        </div>
+        <div class="option-item" onclick="toggleOption(this)">
+            <div class="check-circle"></div>
+            <span class="option-text">Redução do estresse e ansiedade</span>
+        </div>
+        <div class="option-item" onclick="toggleOption(this)">
+            <div class="check-circle"></div>
+            <span class="option-text">Aumento da autoestima e confiança</span>
+        </div>
+        <div class="option-item" onclick="toggleOption(this)">
+            <div class="check-circle"></div>
+            <span class="option-text">Proteção contra doenças metabólicas</span>
+        </div>
+        <div class="option-item full-width" onclick="toggleOption(this)">
+            <div class="check-circle"></div>
+            <span class="option-text">Emagrecer sem esforço e sem efeito sanfona</span>
+        </div>
+    </div>
+
+    <button class="btn-grande" onclick="proximaPagina()">
+        Continuar
+    </button>
+</div>
+
+<script>
+    function toggleOption(element) {
+        element.classList.toggle('selected');
+    }
+
+    function proximaPagina() {
+        // Coleta as opções selecionadas
+        const selecionados = Array.from(document.querySelectorAll('.option-item.selected .option-text'))
+            .map(el => el.innerText);
+
+        // Dispara evento de Lead com as preferências do usuário
+        fbq('track', 'Lead', {
+            content_name: 'Selecao_Beneficios',
+            custom_data: selecionados
+        });
+
+        window.location.href = "pagina18.html"; 
+    }
+</script>
+
+</body>
+</html>

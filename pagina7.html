@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta de Peso - Rotina dos Chás</title>
+
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2284139215452492');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2284139215452492&ev=PageView&noscript=1"
+/></noscript>
+
+<script>
+  window.pixelId = "6a419de1882f903c56e5cab1";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green-btn: #1b8a43;
+            --green-shadow: #125e2e;
+            --green-border: #2d8a4e;
+            --green-bg-light: #f4faf6;
+            --text-dark: #1a1a1a;
+            --gray-progress: #f3f3f3;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #fff;
+        }
+
+        .main-container {
+            max-width: 450px; 
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .logo-container {
+            width: 100%;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .logo-container img {
+            max-width: 130px;
+            height: auto;
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 12px;
+            background-color: var(--gray-progress);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: var(--green-btn);
+            width: 40%;
+            border-radius: 20px;
+            transition: width 1.5s cubic-bezier(0.1, 0.5, 0.5, 1);
+        }
+
+        h2 {
+            color: var(--text-dark);
+            font-size: 24px;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.4;
+            color: var(--text-dark);
+            margin-bottom: 30px;
+            padding: 0 15px;
+            text-decoration: underline;
+        }
+
+        .weight-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .weight-card {
+            background-color: #fff;
+            border: 2px solid var(--green-border);
+            border-radius: 20px;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 4px 0px 0px var(--green-border);
+            transition: all 0.1s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 200px;
+            justify-content: space-between;
+        }
+
+        .weight-card:active {
+            transform: translateY(3px);
+            box-shadow: 0 1px 0px 0px var(--green-border);
+        }
+
+        .weight-card img {
+            width: 80%;
+            height: auto;
+            display: block;
+            margin-top: 20px;
+        }
+
+        .weight-label {
+            padding: 20px 10px;
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--text-dark);
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body onload="avancarProgresso()">
+
+<div class="main-container">
+    
+    <div class="logo-container">
+        <img src="logo.png" alt="Logotipo">
+    </div>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="barra"></div>
+    </div>
+
+    <h2>Quantos quilos deseja perder?</h2>
+    
+    <p class="description">
+        A rotina dos chás bariátricos pode eliminar gordura de forma acelerada.
+    </p>
+
+    <div class="weight-grid">
+        <div class="weight-card" onclick="proxima('5 a 10kg')">
+            <img src="balanca.png" alt="5 a 10kg">
+            <div class="weight-label">5KG A 10KG</div>
+        </div>
+
+        <div class="weight-card" onclick="proxima('15 a 20kg')">
+            <img src="balanca.png" alt="15 a 20kg">
+            <div class="weight-label">15KG A 20KG</div>
+        </div>
+
+        <div class="weight-card" onclick="proxima('Mais de 20kg')">
+            <img src="balanca.png" alt="Mais de 20kg">
+            <div class="weight-label">MAIS DE 20KG</div>
+        </div>
+
+        <div class="weight-card" onclick="proxima('Nao tenho meta')">
+            <img src="duvida.png" alt="Não tenho meta">
+            <div class="weight-label" style="text-transform: none;">Não tenho uma meta exata</div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function avancarProgresso() {
+        setTimeout(() => {
+            document.getElementById("barra").style.width = "45%";
+        }, 300);
+    }
+
+    function proxima(meta) {
+        // Dispara o evento de Lead com a meta selecionada
+        fbq('track', 'Lead', {
+            content_name: 'Selecao_Meta_Peso',
+            value: meta
+        });
+
+        setTimeout(function() {
+            window.location.href = "pagina8.html"; 
+        }, 200);
+    }
+</script>
+
+</body>
+</html>

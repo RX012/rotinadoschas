@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Captura - Rotina dos Chás</title>
+
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2284139215452492');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2284139215452492&ev=PageView&noscript=1"
+/></noscript>
+
+<script>
+  window.pixelId = "6a419de1882f903c56e5cab1";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green-btn: #1b8a43;
+            --green-shadow: #125e2e;
+            --red-alert: #d93025;
+            --text-dark: #1a1a1a;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #fff;
+        }
+
+        .main-container {
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .logo-container {
+            width: 100%;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .logo-container img {
+            max-width: 150px;
+            height: auto;   
+        }
+
+        .banner-container {
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .banner-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .warning-text {
+            font-size: 16px;
+            line-height: 1.5;
+            color: var(--text-dark);
+            margin-bottom: 30px;
+            padding: 0 10px;
+        }
+
+        .highlight-red {
+            color: var(--red-alert);
+            font-weight: 700;
+        }
+
+        .bold {
+            font-weight: 700;
+        }
+
+        .btn-teste {
+            width: 100%;
+            background-color: var(--green-btn);
+            color: white;
+            border: none;
+            padding: 22px;
+            border-radius: 15px;
+            font-size: 18px;
+            font-weight: 900;
+            text-transform: uppercase;
+            cursor: pointer;
+            letter-spacing: 0.5px;
+            box-shadow: 0 6px 0px 0px var(--green-shadow);
+            transition: all 0.2s ease;
+            animation: pulse-3d 2.5s infinite;
+            outline: none;
+        }
+
+        .btn-teste:active {
+            transform: translateY(4px);
+            box-shadow: 0 2px 0px 0px var(--green-shadow);
+        }
+
+        @keyframes pulse-3d {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+    
+    <div class="logo-container">
+        <img src="logo.png" alt="Logotipo">
+    </div>
+
+    <div class="banner-container">
+        <img src="banner.jpg" alt="Imagem Destaque">
+    </div>
+
+    <p class="warning-text">
+        <span class="highlight-red">Atenção:</span> oferecemos apenas <span class="bold">uma consulta por pessoa.</span> 
+        Se você sair, perderá a sua vez. Aproveite essa oportunidade exclusiva!
+    </p>
+
+    <button class="btn-teste" onclick="irParaPagina2()">
+        Fazer Teste Grátis
+    </button>
+
+</div>
+
+<script>
+    function irParaPagina2() {
+        // Dispara o evento de Lead antes de redirecionar
+        fbq('track', 'Lead');
+        
+        // Pequeno atraso para garantir que o evento seja enviado
+        setTimeout(function() {
+            window.location.href = "pagina2.html"; 
+        }, 150);
+    }
+</script>
+
+</body>
+</html>

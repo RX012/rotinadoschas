@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preferências - Rotina dos Chás</title>
+
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2284139215452492');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2284139215452492&ev=PageView&noscript=1"
+/></noscript>
+
+<script>
+  window.pixelId = "6a419de1882f903c56e5cab1";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green-btn: #1b8a43;
+            --green-light: #e8f5e9;
+            --green-border: #2d8a4e;
+            --green-shadow: #125e2e;
+            --text-dark: #1a1a1a;
+            --gray-progress: #f3f3f3;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0; padding: 0;
+            display: flex; justify-content: center;
+            background-color: #fff;
+        }
+
+        .main-container {
+            max-width: 450px; width: 100%;
+            text-align: center; padding: 15px;
+            box-sizing: border-box;
+        }
+
+        .logo-container { width: 100%; margin-bottom: 20px; display: flex; justify-content: center; }
+        .logo-container img { max-width: 110px; }
+
+        .progress-container {
+            width: 100%; height: 8px;
+            background-color: var(--gray-progress);
+            border-radius: 20px; margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%; 
+            background-color: var(--green-btn);
+            width: 98%; 
+            border-radius: 20px;
+        }
+
+        h2 { color: var(--text-dark); font-size: 20px; font-weight: 900; margin-bottom: 10px; line-height: 1.3; }
+        .sub-titulo { font-size: 14px; color: #444; margin-bottom: 25px; display: block; text-decoration: underline; }
+
+        .fruit-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+
+        .fruit-card {
+            border: 2px solid #eee;
+            border-radius: 15px;
+            padding: 20px 10px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #fff;
+        }
+
+        .fruit-card.selected {
+            border-color: var(--green-border);
+            background-color: var(--green-light);
+            box-shadow: 0 4px 0px 0px var(--green-border);
+        }
+
+        .check-circle {
+            position: absolute;
+            top: 10px; left: 10px;
+            width: 20px; height: 20px;
+            border: 2px solid #ddd;
+            border-radius: 50%;
+            background: #fff;
+            display: flex; align-items: center; justify-content: center;
+        }
+
+        .selected .check-circle {
+            background-color: var(--green-btn);
+            border-color: var(--green-btn);
+        }
+
+        .check-circle svg { width: 12px; height: 12px; color: white; display: none; }
+        .selected .check-circle svg { display: block; }
+
+        .fruit-img { width: 65px; height: 65px; object-fit: contain; margin-bottom: 10px; }
+        .fruit-name { font-weight: 700; font-size: 15px; color: var(--text-dark); }
+
+        .btn-grande {
+            background-color: var(--green-btn);
+            color: white; border: none; border-radius: 12px;
+            width: 100%; padding: 22px;
+            font-size: 19px; font-weight: 800;
+            cursor: pointer;
+            box-shadow: 0 6px 0px 0px var(--green-shadow);
+            transition: 0.1s;
+        }
+
+        .btn-grande:active { transform: translateY(3px); box-shadow: 0 3px 0px 0px var(--green-shadow); }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+    <div class="logo-container">
+        <img src="logo.png" alt="Logo">
+    </div>
+
+    <div class="progress-container">
+        <div class="progress-bar"></div>
+    </div>
+
+    <h2>Qual dessas frutas você costuma preferir mais no seu dia a dia?</h2>
+    <span class="sub-titulo">Suas preferências alimentares também ajudam no processo!</span>
+
+    <div class="fruit-grid">
+        <div class="fruit-card" onclick="toggleSelection(this, 'Limão')">
+            <div class="check-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <img src="limao.jpg" class="fruit-img" alt="Limão">
+            <span class="fruit-name">Limão</span>
+        </div>
+
+        <div class="fruit-card" onclick="toggleSelection(this, 'Laranja')">
+            <div class="check-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <img src="laranja.jpg" class="fruit-img" alt="Laranja">
+            <span class="fruit-name">Laranja</span>
+        </div>
+
+        <div class="fruit-card" onclick="toggleSelection(this, 'Banana')">
+            <div class="check-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <img src="banana.jpg" class="fruit-img" alt="Banana">
+            <span class="fruit-name">Banana</span>
+        </div>
+
+        <div class="fruit-card" onclick="toggleSelection(this, 'Maçã')">
+            <div class="check-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <img src="maca.jpg" class="fruit-img" alt="Maçã">
+            <span class="fruit-name">Maçã</span>
+        </div>
+
+        <div class="fruit-card" onclick="toggleSelection(this, 'Morango')">
+            <div class="check-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <img src="morango.jpg" class="fruit-img" alt="Morango">
+            <span class="fruit-name">Morango</span>
+        </div>
+
+        <div class="fruit-card" onclick="toggleSelection(this, 'Abacaxi')">
+            <div class="check-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <img src="abacaxi.jpg" class="fruit-img" alt="Abacaxi">
+            <span class="fruit-name">Abacaxi</span>
+        </div>
+    </div>
+
+    <button class="btn-grande" onclick="finalizarSelecao()">Continuar</button>
+</div>
+
+<script>
+    let selecionadas = [];
+    function toggleSelection(el, fruta) {
+        el.classList.toggle('selected');
+        if(selecionadas.includes(fruta)) {
+            selecionadas = selecionadas.filter(f => f !== fruta);
+        } else {
+            selecionadas.push(fruta);
+        }
+    }
+
+    function finalizarSelecao() {
+        if(selecionadas.length === 0) {
+            alert("Selecione pelo menos uma fruta!");
+            return;
+        }
+        localStorage.setItem("usuario_frutas", JSON.stringify(selecionadas));
+        
+        // Dispara evento de Lead com as frutas escolhidas
+        fbq('track', 'Lead', {
+            content_name: 'Captura_Frutas_Preferencia',
+            custom_data: { frutas: selecionadas }
+        });
+        
+        window.location.href = "pagina26.html";
+    }
+</script>
+
+</body>
+</html>

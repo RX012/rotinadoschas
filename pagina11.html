@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impacto do Peso - Rotina dos Chás</title>
+
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2284139215452492');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2284139215452492&ev=PageView&noscript=1"
+/></noscript>
+
+<script>
+  window.pixelId = "6a419de1882f903c56e5cab1";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green-btn: #1b8a43;
+            --green-shadow: #125e2e;
+            --green-border: #2d8a4e;
+            --text-dark: #1a1a1a;
+            --gray-progress: #f3f3f3;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0; padding: 0;
+            display: flex; justify-content: center;
+            background-color: #fff;
+        }
+
+        .main-container {
+            max-width: 450px; width: 100%;
+            text-align: center; padding: 15px;
+            box-sizing: border-box;
+        }
+
+        .logo-container { width: 100%; margin-bottom: 10px; display: flex; justify-content: center; }
+        .logo-container img { max-width: 110px; height: auto; }
+
+        .progress-container {
+            width: 100%; height: 10px;
+            background-color: var(--gray-progress);
+            border-radius: 20px; margin-bottom: 25px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%; background-color: var(--green-btn);
+            width: 55%;
+            border-radius: 20px;
+            transition: width 2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        h2 { color: var(--text-dark); font-size: 22px; font-weight: 900; margin-bottom: 25px; line-height: 1.2; }
+        #nome-usuario { color: var(--text-dark); }
+
+        .option-card {
+            width: 100%;
+            background-color: #fff;
+            border: 2px solid var(--green-border);
+            border-radius: 15px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            box-shadow: 0 4px 0px 0px var(--green-border);
+            transition: all 0.1s ease;
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            box-sizing: border-box;
+            text-align: left;
+        }
+
+        .option-card:active {
+            transform: translateY(3px);
+            box-shadow: 0 1px 0px 0px var(--green-border);
+        }
+
+        .emoji {
+            font-size: 30px;
+            margin-right: 15px;
+            min-width: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .option-text {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-dark);
+            line-height: 1.2;
+        }
+    </style>
+</head>
+<body onload="configurarPagina()">
+
+<div class="main-container">
+    <div class="logo-container">
+        <img src="logo.png" alt="Logotipo">
+    </div>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="barra"></div>
+    </div>
+
+    <h2><span id="nome-exibicao"></span> como o seu peso afeta sua vida?</h2>
+
+    <div class="option-card" onclick="salvarImpacto('Vergonha de fotos')">
+        <div class="emoji">🤦</div>
+        <div class="option-text">Tenho vergonha de tirar fotos</div>
+    </div>
+
+    <div class="option-card" onclick="salvarImpacto('Parceiro preocupado')">
+        <div class="emoji">😔</div>
+        <div class="option-text">Meu parceiro está preocupado com minha saúde</div>
+    </div>
+
+    <div class="option-card" onclick="salvarImpacto('Julgado por amigos')">
+        <div class="emoji">😢</div>
+        <div class="option-text">Sinto-me julgado por amigos e colegas</div>
+    </div>
+
+    <div class="option-card" onclick="salvarImpacto('Evito encontros')">
+        <div class="emoji">💔</div>
+        <div class="option-text">Evito encontros românticos por não me sentir atraente</div>
+    </div>
+
+    <div class="option-card" onclick="salvarImpacto('Nenhuma')">
+        <div class="emoji">👋</div>
+        <div class="option-text">Nenhuma das opções</div>
+    </div>
+
+</div>
+
+<script>
+    function configurarPagina() {
+        const nomeSalvo = localStorage.getItem("usuario_nome");
+        if (nomeSalvo) {
+            document.getElementById("nome-exibicao").innerText = nomeSalvo;
+        }
+
+        setTimeout(() => {
+            document.getElementById("barra").style.width = "60%";
+        }, 300);
+    }
+
+    function salvarImpacto(valor) {
+        localStorage.setItem("usuario_impacto_vida", valor);
+        
+        // Dispara o evento de Lead com o impacto selecionado
+        fbq('track', 'Lead', {
+            content_name: 'Selecao_Impacto_Vida',
+            value: valor
+        });
+        
+        setTimeout(function() {
+            window.location.href = "pagina12.html"; 
+        }, 200);
+    }
+</script>
+
+</body>
+</html>

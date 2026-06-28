@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipo de Corpo - Rotina dos Chás</title>
+
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2284139215452492');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2284139215452492&ev=PageView&noscript=1"
+/></noscript>
+
+<script>
+  window.pixelId = "6a419de1882f903c56e5cab1";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green-btn: #1b8a43;
+            --green-shadow: #125e2e;
+            --green-border: #2d8a4e;
+            --text-dark: #1a1a1a;
+            --gray-progress: #f3f3f3;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0; padding: 0;
+            display: flex; justify-content: center;
+            background-color: #fff;
+        }
+
+        .main-container {
+            max-width: 450px; width: 100%;
+            text-align: center; padding: 15px;
+            box-sizing: border-box;
+        }
+
+        .logo-container { width: 100%; margin-bottom: 10px; display: flex; justify-content: center; }
+        .logo-container img { max-width: 110px; height: auto; }
+
+        .progress-container {
+            width: 100%; height: 10px;
+            background-color: var(--gray-progress);
+            border-radius: 20px; margin-bottom: 25px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%; background-color: var(--green-btn);
+            width: 50%;
+            border-radius: 20px;
+            transition: width 2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        h2 { color: var(--text-dark); font-size: 22px; font-weight: 900; margin-bottom: 8px; }
+
+        .subtitle {
+            font-size: 15px;
+            color: #444;
+            line-height: 1.4;
+            margin-bottom: 25px;
+            display: block;
+            padding: 0 10px;
+        }
+
+        .option-card {
+            width: 100%;
+            background-color: #fff;
+            border: 2px solid var(--green-border);
+            border-radius: 15px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            box-shadow: 0 4px 0px 0px var(--green-border);
+            transition: all 0.1s ease;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            padding: 5px 20px;
+            box-sizing: border-box;
+        }
+
+        .option-card:active {
+            transform: translateY(3px);
+            box-shadow: 0 1px 0px 0px var(--green-border);
+        }
+
+        .option-card img {
+            height: 80px;
+            width: auto;
+            margin-right: 20px;
+        }
+
+        .option-label {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-dark);
+            flex-grow: 1;
+            text-align: center;
+            padding-right: 40px;
+        }
+    </style>
+</head>
+<body onload="iniciarAnimacao()">
+
+<div class="main-container">
+    <div class="logo-container">
+        <img src="logo.png" alt="Logotipo">
+    </div>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="barra"></div>
+    </div>
+
+    <h2>Qual é o seu tipo de corpo atual?</h2>
+    <span class="subtitle">Vamos personalizar os Chás que funcionem para seu tipo de corpo.</span>
+
+    <div class="option-card" onclick="salvarOpcao('Regular')">
+        <img src="corpo_regular.png" alt="Corpo Regular">
+        <div class="option-label">Regular</div>
+    </div>
+
+    <div class="option-card" onclick="salvarOpcao('Flácido')">
+        <img src="corpo_flacido.png" alt="Corpo Flácido">
+        <div class="option-label">Flácido</div>
+    </div>
+
+    <div class="option-card" onclick="salvarOpcao('Sobrepeso')">
+        <img src="corpo_sobrepeso.png" alt="Corpo Sobrepeso">
+        <div class="option-label">Sobrepeso</div>
+    </div>
+
+</div>
+
+<script>
+    function iniciarAnimacao() {
+        setTimeout(() => {
+            document.getElementById("barra").style.width = "55%";
+        }, 300);
+    }
+
+    function salvarOpcao(tipo) {
+        // Salva a escolha no localStorage
+        localStorage.setItem("usuario_tipo_corpo", tipo);
+        
+        // Dispara evento de Lead com o tipo de corpo selecionado
+        fbq('track', 'Lead', {
+            content_name: 'Selecao_Tipo_Corpo',
+            value: tipo
+        });
+        
+        setTimeout(function() {
+            window.location.href = "pagina11.html"; 
+        }, 200);
+    }
+</script>
+
+</body>
+</html>

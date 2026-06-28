@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dificuldades Diárias - Rotina dos Chás</title>
+
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2284139215452492');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2284139215452492&ev=PageView&noscript=1"
+/></noscript>
+
+<script>
+  window.pixelId = "6a419de1882f903c56e5cab1";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green-btn: #1b8a43;
+            --green-shadow: #125e2e;
+            --green-border: #2d8a4e;
+            --text-dark: #1a1a1a;
+            --gray-progress: #f3f3f3;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0; padding: 0;
+            display: flex; justify-content: center;
+            background-color: #fff;
+        }
+
+        .main-container {
+            max-width: 450px; width: 100%;
+            text-align: center; padding: 15px;
+            box-sizing: border-box;
+        }
+
+        .logo-container { width: 100%; margin-bottom: 10px; display: flex; justify-content: center; }
+        .logo-container img { max-width: 110px; height: auto; }
+
+        .progress-container {
+            width: 100%; height: 8px;
+            background-color: var(--gray-progress);
+            border-radius: 20px; margin-bottom: 25px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%; background-color: var(--green-btn);
+            width: 65%; 
+            border-radius: 20px;
+            transition: width 2s ease-in-out;
+        }
+
+        h2 { color: var(--text-dark); font-size: 20px; font-weight: 900; margin-bottom: 5px; line-height: 1.3; }
+        .subtitle { font-size: 14px; color: #444; margin-bottom: 25px; display: block; }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .option-card {
+            background-color: #fff;
+            border: 2px solid var(--green-border);
+            border-radius: 15px;
+            padding: 20px 10px;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 140px;
+            box-sizing: border-box;
+        }
+
+        .radio-circle {
+            position: absolute;
+            top: 50%;
+            left: 12px;
+            transform: translateY(-50%);
+            height: 22px;
+            width: 22px;
+            border: 2px solid var(--green-border);
+            border-radius: 50%;
+            background-color: #fff;
+        }
+
+        .option-card input {
+            display: none;
+        }
+
+        .option-card input:checked + .radio-circle {
+            background-color: var(--green-btn);
+            box-shadow: inset 0 0 0 4px #fff;
+        }
+
+        .option-card img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-bottom: 10px;
+            margin-left: 15px;
+        }
+
+        .option-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-left: 15px;
+            line-height: 1.2;
+        }
+
+        .btn-continuar {
+            background-color: var(--green-btn);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            width: 100%;
+            padding: 18px;
+            font-size: 18px;
+            font-weight: 800;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: transform 0.1s;
+        }
+
+        .btn-continuar:active { transform: scale(0.98); }
+    </style>
+</head>
+<body onload="document.getElementById('barra').style.width='70%'">
+
+<div class="main-container">
+    <div class="logo-container">
+        <img src="logo.png" alt="Logotipo">
+    </div>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="barra"></div>
+    </div>
+
+    <h2>Você enfrenta alguma dificuldade no dia a dia devido ao peso?</h2>
+    <span class="subtitle">Selecione abaixo</span>
+
+    <div class="options-grid">
+        <label class="option-card">
+            <input type="radio" name="dificuldade" value="Subir escadas">
+            <span class="radio-circle"></span>
+            <img src="img_escada.png" alt="">
+            <span class="option-label">Subir as<br>escadas</span>
+        </label>
+
+        <label class="option-card">
+            <input type="radio" name="dificuldade" value="Se sentar">
+            <span class="radio-circle"></span>
+            <img src="img_sentar.png" alt="">
+            <span class="option-label">Se sentar</span>
+        </label>
+
+        <label class="option-card">
+            <input type="radio" name="dificuldade" value="Agachar">
+            <span class="radio-circle"></span>
+            <img src="img_agachar.png" alt="">
+            <span class="option-label">Agachar</span>
+        </label>
+
+        <label class="option-card">
+            <input type="radio" name="dificuldade" value="Deitar na cama">
+            <span class="radio-circle"></span>
+            <img src="img_cama.png" alt="">
+            <span class="option-label">Deitar na<br>cama</span>
+        </label>
+
+        <label class="option-card">
+            <input type="radio" name="dificuldade" value="Outros">
+            <span class="radio-circle"></span>
+            <img src="img_outros.png" alt="">
+            <span class="option-label">Outros</span>
+        </label>
+
+        <label class="option-card">
+            <input type="radio" name="dificuldade" value="Nenhuma">
+            <span class="radio-circle"></span>
+            <img src="img_check.png" alt="">
+            <span class="option-label">Não tenho<br>dificuldades</span>
+        </label>
+    </div>
+
+    <button class="btn-continuar" onclick="proximaPagina()">Continuar</button>
+</div>
+
+<script>
+    function proximaPagina() {
+        const selecionado = document.querySelector('input[name="dificuldade"]:checked');
+        if (!selecionado) {
+            alert("Por favor, selecione uma opção.");
+            return;
+        }
+        
+        // Salva localmente
+        localStorage.setItem("usuario_dificuldade", selecionado.value);
+        
+        // Dispara o evento de Lead com a dificuldade selecionada
+        fbq('track', 'Lead', {
+            content_name: 'Selecao_Dificuldade_Diaria',
+            value: selecionado.value
+        });
+        
+        window.location.href = "pagina14.html";
+    }
+</script>
+
+</body>
+</html>

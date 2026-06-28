@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peso - Rotina dos Chás</title>
+
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2284139215452492');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2284139215452492&ev=PageView&noscript=1"
+/></noscript>
+
+<script>
+  window.pixelId = "6a419de1882f903c56e5cab1";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green-btn: #1b8a43;
+            --green-shadow: #125e2e;
+            --green-border: #2d8a4e;
+            --green-bg-light: #f4faf6;
+            --text-dark: #1a1a1a;
+            --gray-progress: #f3f3f3;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #fff;
+        }
+
+        .main-container {
+            max-width: 450px; 
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .logo-container {
+            width: 100%;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .logo-container img {
+            max-width: 130px;
+            height: auto;
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 12px;
+            background-color: var(--gray-progress);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: var(--green-btn);
+            width: 12%; 
+            border-radius: 20px;
+            transition: width 1.5s cubic-bezier(0.1, 0.5, 0.5, 1);
+        }
+
+        h2 {
+            color: var(--text-dark);
+            font-size: 24px;
+            font-weight: 900;
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+        }
+
+        .highlight-green {
+            color: #26a855;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.4;
+            color: var(--text-dark);
+            margin-bottom: 30px;
+            padding: 0 10px;
+            text-decoration: underline;
+        }
+
+        .bold-black {
+            font-weight: 800;
+        }
+
+        .options-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .option-item {
+            background-color: var(--green-bg-light);
+            border: 2px solid var(--green-border);
+            border-radius: 15px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 0px 0px var(--green-border);
+            transition: all 0.1s ease;
+            box-sizing: border-box;
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .option-item:active {
+            transform: translateY(3px);
+            box-shadow: 0 1px 0px 0px var(--green-border);
+            background-color: #e8f5ed;
+        }
+    </style>
+</head>
+<body onload="avancarProgresso()">
+
+<div class="main-container">
+    
+    <div class="logo-container">
+        <img src="logo.png" alt="Logotipo">
+    </div>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="barra"></div>
+    </div>
+
+    <h2>Quantos quilos você</h2>
+    <h2 class="highlight-green">deseja perder?</h2>
+
+    <p class="description">
+        O protocolo <span class="bold-black">Rotina dos chás bariátricos</span> ajuda a eliminar gordura de forma acelerada.
+    </p>
+
+    <div class="options-list">
+        <div class="option-item" onclick="irParaPagina4('Até 5kg')">Até 5kg</div>
+        <div class="option-item" onclick="irParaPagina4('De 6 a 10 kg')">De 6 a 10 kg</div>
+        <div class="option-item" onclick="irParaPagina4('De 11 a 15 kg')">De 11 a 15 kg</div>
+        <div class="option-item" onclick="irParaPagina4('De 16 a 20 kg')">De 16 a 20 kg</div>
+        <div class="option-item" onclick="irParaPagina4('Mais de 20 kg')">Mais de 20 kg</div>
+    </div>
+
+</div>
+
+<script>
+    function avancarProgresso() {
+        setTimeout(() => {
+            document.getElementById("barra").style.width = "25%";
+        }, 300);
+    }
+
+    function irParaPagina4(opcao) {
+        // Dispara o evento de Lead identificando a resposta do usuário
+        fbq('track', 'Lead', {
+            content_name: 'Selecao_Peso',
+            value: opcao
+        });
+
+        // Aguarda o efeito visual do clique antes de mudar de página
+        setTimeout(function() {
+            window.location.href = "pagina4.html"; 
+        }, 150);
+    }
+</script>
+
+</body>
+</html>

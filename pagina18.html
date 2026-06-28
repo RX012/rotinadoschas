@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformação - Rotina dos Chás</title>
+
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2284139215452492');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2284139215452492&ev=PageView&noscript=1"
+/></noscript>
+
+<script>
+  window.pixelId = "6a419de1882f903c56e5cab1";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green-btn: #1b8a43;
+            --green-shadow: #125e2e;
+            --green-border: #2d8a4e;
+            --text-dark: #1a1a1a;
+            --gray-progress: #f3f3f3;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0; padding: 0;
+            display: flex; justify-content: center;
+            background-color: #fff;
+        }
+
+        .main-container {
+            max-width: 450px; width: 100%;
+            text-align: center; padding: 15px;
+            box-sizing: border-box;
+        }
+
+        .logo-container { width: 100%; margin-bottom: 20px; display: flex; justify-content: center; }
+        .logo-container img { max-width: 110px; height: auto; }
+
+        .progress-container {
+            width: 100%; height: 8px;
+            background-color: var(--gray-progress);
+            border-radius: 20px; margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%; background-color: var(--green-btn);
+            width: 95%;
+            border-radius: 20px;
+            animation: recuoFinal 3s forwards ease-in-out;
+        }
+
+        @keyframes recuoFinal {
+            0% { width: 95%; }
+            70% { width: 99%; }
+            100% { width: 97%; }
+        }
+
+        h2 { color: var(--text-dark); font-size: 22px; font-weight: 900; margin-bottom: 5px; }
+        .location-tag { font-size: 14px; color: #555; margin-bottom: 20px; display: block; }
+
+        .comparison-img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        .testimonial-card {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: left;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .profile-pic {
+            width: 50px; height: 50px;
+            border-radius: 50%;
+            margin-right: 12px;
+            object-fit: cover;
+            background-color: #ddd;
+        }
+
+        .profile-info b { display: block; font-size: 16px; color: var(--text-dark); }
+        .profile-info span { font-size: 12px; color: #777; }
+
+        .testimonial-text {
+            font-size: 14px; color: #444;
+            line-height: 1.6; margin-bottom: 15px;
+        }
+
+        .stars { color: #ffcc00; font-size: 18px; }
+
+        .btn-grande {
+            background-color: var(--green-btn);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            width: 100%;
+            padding: 22px;
+            font-size: 20px;
+            font-weight: 800;
+            cursor: pointer;
+            box-shadow: 0 6px 0px 0px var(--green-shadow);
+            transition: all 0.1s;
+            animation: pulseBtn 2s infinite ease-in-out;
+            outline: none;
+        }
+
+        .btn-grande:active {
+            transform: translateY(3px);
+            box-shadow: 0 3px 0px 0px var(--green-shadow);
+        }
+
+        @keyframes pulseBtn {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+    <div class="logo-container">
+        <img src="logo.png" alt="Logotipo">
+    </div>
+
+    <div class="progress-container">
+        <div class="progress-bar"></div>
+    </div>
+
+    <h2>🔥 Histórias Reais de Transformação! 🔥</h2>
+    <span class="location-tag">📍 Depoimento: Cláudia-Porto Alegre,RS</span>
+
+    <img src="claudia_comparacao.jpg" alt="Antes e Depois Claudia" class="comparison-img">
+
+    <div class="testimonial-card">
+        <div class="profile-header">
+            <img src="claudia_perfil.jpg" alt="Claudia" class="profile-pic">
+            <div class="profile-info">
+                <b>Claudia</b>
+                <span>Porto alegre ,RS</span>
+            </div>
+        </div>
+        
+        <p class="testimonial-text">
+            Eu já tinha tentado de tudo para emagrecer, mas nada funcionava. Depois de incluir os <b>Chás Bariátricos</b> na minha rotina, perdi 12kg sem mudar nada na minha alimentação! O mais incrível é que minha fome e ansiedade diminuíram naturalmente!
+        </p>
+        
+        <div class="stars">★★★★★</div>
+    </div>
+
+    <button class="btn-grande" onclick="irParaProxima()">
+        Continuar
+    </button>
+</div>
+
+<script>
+    function irParaProxima() {
+        // Dispara evento de Lead registrando a leitura do depoimento
+        fbq('track', 'Lead', {
+            content_name: 'Depoimento_Claudia_Visualizado'
+        });
+
+        window.location.href = "pagina19.html";
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotina dos Chás - Plano Personalizado</title>
+
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2284139215452492');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2284139215452492&ev=PageView&noscript=1"
+/></noscript>
+
+<script>
+  window.pixelId = "6a419de1882f903c56e5cab1";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+        .btn-3d {
+            box-shadow: 0 6px 0 #166534;
+            transition: all 0.1s ease;
+            animation: pulse 2s infinite;
+        }
+        .btn-3d:active {
+            box-shadow: 0 2px 0 #166534;
+            transform: translateY(4px);
+        }
+
+        #barra-progresso { width: 0%; transition: width 3s ease-in-out; }
+        #carousel { display: flex; transition: transform 0.5s ease-in-out; width: 300%; }
+        .slide { width: 33.333%; flex-shrink: 0; }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+
+    <main class="max-w-md mx-auto bg-white shadow-2xl min-h-screen">
+
+        <section class="p-6 text-center">
+            <img src="logo.png" alt="Logo" class="mx-auto mb-6 w-32"> 
+            <div class="h-3 w-full bg-gray-200 rounded-full mb-2 overflow-hidden">
+                <div id="barra-progresso" class="h-full bg-green-500 rounded-full"></div>
+            </div>
+            <p class="text-[10px] text-gray-500 font-bold mb-8 uppercase tracking-tighter">
+                Analisando perfil: <span id="porcentagem-texto">0</span>% concluído
+            </p>
+
+            <h1 class="text-2xl font-black mb-4 leading-tight">Amiga, você está pronta para <span class="text-green-600 uppercase">transformar seu corpo</span>?</h1>
+            
+            <div class="grid grid-cols-2 gap-4 mt-6">
+                <div class="border rounded-xl p-2 bg-gray-50 text-center">
+                    <p class="font-bold text-sm mb-2 uppercase">Antes</p>
+                    <img src="mulher_90kg.jpg" class="w-full rounded-lg mb-2"> 
+                    <div class="mt-4 p-2 bg-red-500 text-white rounded-lg text-[9px] font-bold uppercase">Risco: Alto</div>
+                </div>
+                <div class="border rounded-xl p-2 bg-green-50 border-green-200 text-center">
+                    <p class="font-bold text-sm mb-2 uppercase">Depois</p>
+                    <img src="mulher_43kg.jpg" class="w-full rounded-lg mb-2"> 
+                    <div class="mt-4 p-2 bg-green-500 text-white rounded-lg text-[9px] font-bold uppercase">Risco: Baixo</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seções de depoimentos, bônus e garantia mantidas como no seu original -->
+        <section class="p-6 bg-gray-50 border-y border-gray-200">
+            <h3 class="font-bold text-center mb-6 italic text-gray-700">Quem Usa Tem Resultado 🥰👇</h3>
+            <div class="relative overflow-hidden rounded-2xl shadow-lg border-4 border-white">
+                <div id="carousel">
+                    <img src="depoimento_whats1.jpg" class="slide" alt="Depoimento 1">
+                    <img src="depoimento_whats2.jpg" class="slide" alt="Depoimento 2">
+                    <img src="depoimento_whats3.jpg" class="slide" alt="Depoimento 3">
+                </div>
+                <button onclick="prevSlide()" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-white/30 backdrop-blur-sm border border-white/50 text-white font-bold text-2xl hover:bg-white/50 transition-all">‹</button>
+                <button onclick="nextSlide()" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-white/30 backdrop-blur-sm border border-white/50 text-white font-bold text-2xl hover:bg-white/50 transition-all">›</button>
+            </div>
+        </section>
+
+        <section class="p-6">
+            <h3 class="font-bold text-center mb-6 text-green-700 underline text-lg">Ao Garantir Hoje, Você Recebe Bônus:</h3>
+            <div class="space-y-4">
+                <div class="bg-[#22c55e] text-white p-4 rounded-[20px] flex items-center gap-4 shadow-md">
+                    <div class="bg-white p-1 rounded-lg w-16 h-16 flex-shrink-0"><img src="icon_detox.png" class="w-full h-full object-cover"></div>
+                    <div><p class="font-black text-sm uppercase">Queima de Gordura:</p><p class="text-xs opacity-90">O que comer após os chás.</p></div>
+                </div>
+                <div class="bg-[#f97316] text-white p-4 rounded-[20px] flex items-center gap-4 shadow-md">
+                    <div class="bg-white p-1 rounded-lg w-16 h-16 flex-shrink-0"><img src="icon_desinchar.png" class="w-full h-full object-cover"></div>
+                    <div><p class="font-black text-sm uppercase">Desinchar em 7 dias:</p><p class="text-xs opacity-90">Resultados rápidos no espelho.</p></div>
+                </div>
+                <div class="bg-[#a855f7] text-white p-4 rounded-[20px] flex items-center gap-4 shadow-md">
+                    <div class="bg-white p-1 rounded-lg w-16 h-16 flex-shrink-0"><img src="icon_sanfona.png" class="w-full h-full object-cover"></div>
+                    <div><p class="font-black text-sm uppercase">Anti-Efeito Sanfona:</p><p class="text-xs opacity-90">Mantenha o peso para sempre.</p></div>
+                </div>
+                <div class="bg-[#ec4899] text-white p-4 rounded-[20px] flex items-center gap-4 shadow-md">
+                    <div class="bg-white p-1 rounded-lg w-16 h-16 flex-shrink-0"><img src="icon_metabolismo.png" class="w-full h-full object-cover"></div>
+                    <div><p class="font-black text-sm uppercase">Metabolismo PRO 5x:</p><p class="text-xs opacity-90">Estratégias para acelerar.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-8 text-center bg-white border-t border-dashed border-gray-200">
+            <h2 class="text-[#22c55e] font-black text-2xl mb-6 uppercase tracking-tight">TUDO O QUE VOCÊ RECEBE:</h2>
+            <div class="flex justify-center mb-8">
+                <ul class="text-left space-y-3">
+                    <li class="flex items-center gap-2 font-bold text-gray-700"><span class="text-[#22c55e] text-xl">✔</span> Rotina dos Chás Completa</li>
+                    <li class="flex items-center gap-2 font-bold text-gray-700"><span class="text-[#22c55e] text-xl">✔</span> Detox Exclusivo 7 Dias</li>
+                    <li class="flex items-center gap-2 font-bold text-gray-700"><span class="text-[#22c55e] text-xl">✔</span> Suporte Exclusivo</li>
+                    <li class="flex items-center gap-2 font-bold text-gray-700"><span class="text-[#22c55e] text-xl">✔</span> Pagamento Único</li>
+                </ul>
+            </div>
+
+            <div class="bg-[#f4f4f4] p-8 rounded-[30px] mb-8 shadow-inner">
+                <p class="text-gray-400 line-through text-sm mb-1 font-medium">De R$97.90</p>
+                <p class="text-[#22c55e] text-6xl font-black tracking-tighter">Para R$37.90</p>
+            </div>
+
+            <a href="https://ggcheckout.app/checkout/v2/LYK9yMY3dNXbXuxWdmMD" 
+               onclick="fbq('track', 'Purchase', {value: 297.00, currency: 'MZN'});" 
+               class="btn-3d block w-full bg-[#22c55e] text-white font-black py-6 rounded-full text-2xl shadow-xl uppercase tracking-tight">
+               QUERO COMEÇAR HOJE! 😍
+            </a>
+        </section>
+
+        <section class="p-8 text-center bg-gray-50">
+            <img src="selo-garantia.png" class="mx-auto w-28 mb-4"> 
+            <h3 class="text-xl font-black mb-2 uppercase text-gray-800">Garantia Incondicional</h3> 
+            <p class="text-sm text-gray-600 leading-relaxed px-2">
+                Você tem <b>30 dias inteiros</b> para testar o protocolo. Se você não sentir seu corpo desinchar ou não ficar 100% satisfeita, basta nos enviar um e-mail e <b>devolvemos todo o seu dinheiro</b> imediatamente. Sem perguntas e sem complicações.
+            </p>
+        </section>
+
+        <footer class="p-6 text-center text-[9px] text-gray-400 uppercase tracking-widest border-t border-gray-100 bg-white">
+            © 2026 chá seca barriga- Todos os direitos reservados
+        </footer>
+
+    </main>
+
+    <script>
+        window.onload = function() {
+            const barra = document.getElementById('barra-progresso');
+            const texto = document.getElementById('porcentagem-texto');
+            setTimeout(() => { barra.style.width = '100%'; }, 100);
+            let count = 0;
+            const interval = setInterval(() => {
+                count++; texto.innerText = count;
+                if (count >= 100) clearInterval(interval);
+            }, 28);
+        };
+
+        let currentSlide = 0;
+        const carousel = document.getElementById('carousel');
+        function updateSlide() { carousel.style.transform = `translateX(-${currentSlide * 33.333}%)`; }
+        function nextSlide() { currentSlide = (currentSlide + 1) % 3; updateSlide(); }
+        function prevSlide() { currentSlide = (currentSlide - 1 + 3) % 3; updateSlide(); }
+        setInterval(nextSlide, 6000); 
+    </script>
+</body>
+</html>

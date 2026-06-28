@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome - Rotina dos Chás</title>
+
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2284139215452492');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2284139215452492&ev=PageView&noscript=1"
+/></noscript>
+
+<script>
+  window.pixelId = "6a419de1882f903c56e5cab1";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green-btn: #1b8a43;
+            --green-shadow: #125e2e;
+            --text-dark: #1a1a1a;
+            --gray-progress: #f3f3f3;
+            --border-input: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0; padding: 0;
+            display: flex; justify-content: center;
+            background-color: #fff;
+        }
+
+        .main-container {
+            max-width: 450px; width: 100%;
+            text-align: center; padding: 15px;
+            box-sizing: border-box;
+        }
+
+        .logo-container { width: 100%; margin-bottom: 30px; display: flex; justify-content: center; }
+        .logo-container img { max-width: 110px; height: auto; }
+
+        h2 { color: var(--text-dark); font-size: 22px; font-weight: 900; margin-bottom: 30px; line-height: 1.2; }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 20px 20px 20px 50px;
+            font-size: 16px;
+            border: 2px solid var(--border-input);
+            border-radius: 15px;
+            box-sizing: border-box;
+            outline: none;
+            background-color: #fcfcfc;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-color: var(--green-btn);
+        }
+
+        .btn-enviar {
+            background-color: var(--green-btn);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            width: 100%;
+            padding: 18px;
+            font-size: 20px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 4px 0px 0px var(--green-shadow);
+            position: relative;
+            overflow: hidden;
+            animation: pulse-button 2s infinite ease-in-out;
+            transition: all 0.1s ease;
+        }
+
+        .btn-enviar::after {
+            content: '';
+            position: absolute;
+            top: -50%; left: -60%;
+            width: 20%; height: 200%;
+            background: rgba(255, 255, 255, 0.4);
+            transform: rotate(30deg);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes pulse-button {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes shine {
+            0% { left: -60%; }
+            20% { left: 120%; }
+            100% { left: 120%; }
+        }
+
+        .btn-enviar:active {
+            transform: translateY(3px) scale(0.98);
+            box-shadow: 0 1px 0px 0px var(--green-shadow);
+        }
+
+        .user-icon {
+            position: absolute;
+            left: 18px;
+            top: 18px;
+            width: 22px;
+            height: 22px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+    <div class="logo-container">
+        <img src="logo.png" alt="Logotipo">
+    </div>
+
+    <h2>Vamos lá! Como posso te chamar?</h2>
+    
+    <div class="input-group">
+        <svg class="user-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z" fill="currentColor"/>
+        </svg>
+        <input type="text" id="userName" placeholder="Digite o seu nome aqui">
+    </div>
+
+    <button class="btn-enviar" onclick="salvarENext()">Enviar</button>
+</div>
+
+<script>
+    function salvarENext() {
+        const nome = document.getElementById("userName").value;
+        
+        if (nome.trim() === "") {
+            alert("Por favor, digite seu nome para continuar.");
+            return;
+        }
+
+        // Armazena o nome localmente
+        localStorage.setItem("usuario_nome", nome);
+
+        // Dispara evento de Lead com o nome (opcionalmente pode ocultar o valor se for sensível)
+        fbq('track', 'Lead', {
+            content_name: 'Cadastro_Nome'
+        });
+
+        setTimeout(function() {
+            window.location.href = "pagina10.html"; 
+        }, 200);
+    }
+</script>
+
+</body>
+</html>
